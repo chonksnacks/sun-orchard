@@ -577,6 +577,154 @@
     footer { padding: 40px 24px; }
     .footer-center { display: none; }
   }
+
+  /* ═══════════════════════════════════════
+     MOBILE OPTIMIZATIONS (max-width: 768px)
+     ═══════════════════════════════════════ */
+  @media (max-width: 768px) {
+
+    /* NAV */
+    nav { padding: 0 20px; height: 56px; }
+    .nav-links { display: none; }
+    .nav-logo { font-size: 22px; }
+    .nav-tag { font-size: 10px; letter-spacing: 1px; }
+
+    /* HERO — stack vertically, cashew above text */
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      padding: 80px 24px 48px;
+      min-height: auto;
+      gap: 0;
+    }
+
+    .hero-left { 
+      order: 2; 
+      padding-right: 0;
+      text-align: left;
+    }
+
+    .hero-right { 
+      order: 1; 
+      min-height: 220px;
+      margin-bottom: 8px;
+    }
+
+    .cashew-wrap { max-width: 280px; margin: 0 auto; }
+
+    .hero-eyebrow { font-size: 10px; letter-spacing: 3px; margin-bottom: 12px; }
+
+    .hero-title {
+      font-size: clamp(72px, 22vw, 110px);
+      letter-spacing: -3px;
+    }
+
+    .hero-sub { font-size: 15px; margin-top: 16px; }
+
+    .hero-tags { margin-top: 20px; gap: 6px; }
+    .tag { font-size: 10px; padding: 5px 11px; }
+
+    /* TICKER */
+    .ticker { padding: 11px 0; }
+    .ticker-item { font-size: 12px; padding: 0 18px; }
+
+    /* STATS — 2 column grid, much tighter */
+    .stats { grid-template-columns: 1fr 1fr; }
+
+    .stat-item { padding: 28px 20px; }
+    .stat-num { font-size: 38px; }
+    .stat-label { font-size: 9px; letter-spacing: 2px; }
+    .stat-desc { font-size: 13px; margin-top: 4px; }
+
+    /* SECTIONS */
+    section { padding: 56px 24px; }
+
+    /* VS SECTION */
+    #difference { padding: 56px 24px; }
+
+    /* VS header */
+    #difference h2 { font-size: clamp(32px, 10vw, 52px); letter-spacing: -1px; }
+    #difference p { font-size: 15px; }
+
+    /* Comparison cards — stack vertically */
+    #difference > div > div:nth-child(2) {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: auto auto auto !important;
+    }
+
+    /* VS divider becomes horizontal bar */
+    #difference > div > div:nth-child(2) > div:nth-child(2) {
+      writing-mode: horizontal-tb !important;
+      padding: 10px 0 !important;
+      height: auto !important;
+      border-radius: 0 !important;
+    }
+
+    #difference > div > div:nth-child(2) > div:nth-child(2) span {
+      writing-mode: horizontal-tb !important;
+      text-orientation: mixed !important;
+      font-size: 13px !important;
+    }
+
+    /* Left card — square top corners */
+    #difference > div > div:nth-child(2) > div:nth-child(1) {
+      border-radius: 16px 16px 0 0 !important;
+    }
+
+    /* Right card — square bottom corners */
+    #difference > div > div:nth-child(2) > div:nth-child(3) {
+      border-radius: 0 0 16px 16px !important;
+    }
+
+    /* Stat trio → 1 column */
+    #difference > div > div:nth-child(3) {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* STORY */
+    .story-grid { 
+      grid-template-columns: 1fr; 
+      gap: 32px; 
+    }
+
+    .story-text h2 { font-size: clamp(32px, 10vw, 52px); }
+    .story-text p { font-size: 15px; }
+    .story-card-text { font-size: 22px; }
+
+    /* FLAVORS */
+    .flavors-section { padding: 56px 24px; }
+    .flavors-header { flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .flavors-header h2 { font-size: clamp(36px, 11vw, 52px); }
+    .flavors-header p { text-align: left; max-width: 100%; }
+    .flavors-grid { grid-template-columns: 1fr; gap: 10px; }
+    .flavor-name { font-size: 52px; }
+    .flavor-bar { height: 44px; }
+
+    /* WHY CHONK */
+    .why-header { margin-bottom: 32px; }
+    .why-header h2 { font-size: clamp(40px, 13vw, 72px); letter-spacing: -2px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .why-item { padding: 28px 24px; }
+
+    /* FOOTER */
+    footer { 
+      flex-direction: column; 
+      gap: 16px; 
+      padding: 40px 24px; 
+      text-align: center; 
+    }
+    .footer-logo { font-size: 26px; }
+    .footer-center { display: none; }
+    .footer-right { text-align: center; }
+  }
+
+  /* Extra small phones */
+  @media (max-width: 390px) {
+    .hero-title { font-size: 68px; }
+    .stat-num { font-size: 32px; }
+    .cashew-wrap { max-width: 240px; }
+  }
+
 </style>
 </head>
 <body>
