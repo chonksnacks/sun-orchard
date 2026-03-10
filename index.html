@@ -200,11 +200,21 @@
     padding: 14px 0;
     overflow: hidden;
     white-space: nowrap;
+    position: relative;
   }
 
   .ticker-inner {
-    display: inline-flex;
-    animation: ticker 22s linear infinite;
+    display: flex;
+    width: max-content;
+    animation: ticker 28s linear infinite;
+  }
+
+  .ticker-inner:hover { animation-play-state: paused; }
+
+  .ticker-set {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
   }
 
   .ticker-item {
@@ -214,6 +224,7 @@
     letter-spacing: 1px;
     padding: 0 28px;
     opacity: 0.9;
+    flex-shrink: 0;
   }
 
   .ticker-sep {
@@ -221,6 +232,7 @@
     font-size: 14px;
     line-height: 1;
     align-self: center;
+    flex-shrink: 0;
   }
 
   /* ── STATS ── */
@@ -547,7 +559,7 @@
   }
 
   @keyframes ticker {
-    0% { transform: translateX(0); }
+    0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
 
@@ -775,18 +787,26 @@
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-inner">
-    <span class="ticker-item">BIG CASHEWS</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">SKIN-ON</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">FAMILY FARM</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">CAMBODIA</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">SEA SALT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">NOTHING BORING ABOUT IT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">BIG CASHEWS</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">SKIN-ON</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">FAMILY FARM</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">CAMBODIA</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">SEA SALT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
-    <span class="ticker-item">NOTHING BORING ABOUT IT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+    <div class="ticker-set">
+      <span class="ticker-item">BIG CASHEWS</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">SKIN-ON</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">FAMILY FARM</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">CAMBODIA</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">SEA SALT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">NATURALLY FARMED</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">NO PESTICIDES</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">NOTHING BORING ABOUT IT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+    </div>
+    <div class="ticker-set" aria-hidden="true">
+      <span class="ticker-item">BIG CASHEWS</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">SKIN-ON</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">FAMILY FARM</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">CAMBODIA</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">SEA SALT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">NATURALLY FARMED</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">NO PESTICIDES</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+      <span class="ticker-item">NOTHING BORING ABOUT IT</span><span class="ticker-sep">&nbsp;&middot;&nbsp;</span>
+    </div>
   </div>
 </div>
 
