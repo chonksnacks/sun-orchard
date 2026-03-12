@@ -737,6 +737,116 @@
     .cashew-wrap { max-width: 240px; }
   }
 
+  /* ── MAILCHIMP OVERRIDES ── */
+  #mc_embed_signup { background: transparent !important; font-family: 'Barlow', sans-serif !important; width: 100% !important; }
+  #mc_embed_signup form { padding: 0 !important; }
+  #mc_embed_signup .mc-field-group { display: none; }
+  #mc_embed_signup h2 { display: none; }
+  #mc_embed_signup .indicates-required { display: none; }
+  #mc_embed_signup .optionalParent { display: none; }
+  #mc_embed_signup #mce-responses { display: none; }
+  #mc_embed_signup div[aria-hidden="true"] { display: none; }
+  #mc_embed_signup_scroll { display: flex; gap: 0; max-width: 420px; margin: 0 auto; border-radius: 100px; overflow: hidden; border: 1.5px solid #DDD; }
+
+  /* Hero variant — dark bg */
+  .mc-hero #mc_embed_signup_scroll { border-color: rgba(255,255,255,0.2); max-width: 460px; }
+  .mc-hero #mc-embedded-subscribe { background: white !important; color: #111 !important; }
+  .mc-hero #mc-embedded-subscribe:hover { background: #556650 !important; color: white !important; }
+  .mc-hero #mce-EMAIL { background: rgba(255,255,255,0.1) !important; color: white !important; }
+  .mc-hero #mce-EMAIL::placeholder { color: rgba(255,255,255,0.4) !important; }
+
+  .chonk-email-input {
+    flex: 1;
+    padding: 16px 24px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: white;
+    font-family: 'Barlow', sans-serif;
+    color: #111;
+  }
+
+  .chonk-email-btn {
+    padding: 16px 28px;
+    background: #556650;
+    color: white;
+    border: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .chonk-email-btn:hover { background: #111; }
+
+  .hero-email-wrap {
+    margin-top: 36px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.85s;
+  }
+
+  .hero-email-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 12px;
+  }
+
+  .hero-email-row {
+    display: flex;
+    gap: 0;
+    max-width: 420px;
+    border-radius: 100px;
+    overflow: hidden;
+    border: 1.5px solid rgba(255,255,255,0.25);
+  }
+
+  .hero-email-row input {
+    flex: 1;
+    padding: 14px 22px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .hero-email-row input::placeholder { color: rgba(255,255,255,0.4); }
+
+  .hero-email-row button {
+    padding: 14px 24px;
+    background: white;
+    color: #111;
+    border: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .hero-email-row button:hover { background: #556650; color: white; }
+
+  .hero-email-note {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-email-row { max-width: 100%; }
+  }
+
 
   @media (max-width: 768px) {
     #haters { padding: 56px 24px; }
@@ -769,6 +879,8 @@
       Nothing boring about it.
     </p>
   </div>
+  </div>
+
   <div class="hero-right">
     <div class="cashew-wrap">
       <div class="cashew-glow"></div>
@@ -802,6 +914,36 @@
     </div>
   </div>
 </div>
+
+<!-- WAITLIST BANNER -->
+<section style="background: #111111; padding: 64px 48px; border-top: 1px solid #1e1e1e;">
+  <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 260px;">
+      <span style="font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #556650;">Early Access</span>
+      <h2 style="font-family: 'Abril Fatface', serif; font-size: clamp(28px, 4vw, 48px); color: white; line-height: 1.05; letter-spacing: -1px; margin-top: 10px;">
+        Be first in the bag.
+      </h2>
+      <p style="font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 10px; line-height: 1.6;">
+        We&rsquo;re dropping soon. Get early access, launch news, and whatever else we cook up.
+      </p>
+    </div>
+    <div style="flex: 1; min-width: 280px; max-width: 440px;">
+      <form action="https://github.us18.list-manage.com/subscribe/post?u=0f854b146e3424d1271cbc689&amp;id=c053ed110f&amp;f_id=00e9ace6f0" method="post" target="_blank"
+            style="display: flex; border-radius: 100px; overflow: hidden; border: 1.5px solid rgba(255,255,255,0.15);">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required
+               style="flex: 1; padding: 16px 22px; border: none; outline: none; font-size: 14px; background: rgba(255,255,255,0.06); color: white; font-family: 'Barlow', sans-serif;">
+        <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_0f854b146e3424d1271cbc689_c053ed110f" tabindex="-1" value=""></div>
+        <button type="submit"
+                style="padding: 16px 28px; background: #556650; color: white; border: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; font-family: 'Barlow', sans-serif; white-space: nowrap; transition: background 0.2s; border-radius: 0 100px 100px 0;"
+                onmouseover="this.style.background='white'; this.style.color='#111'"
+                onmouseout="this.style.background='#556650'; this.style.color='white'">
+          Notify Me
+        </button>
+      </form>
+      <p style="font-size: 11px; color: rgba(255,255,255,0.2); margin-top: 10px; padding-left: 4px;">No spam. Just cashews.</p>
+    </div>
+  </div>
+</section>
 
 <!-- STATS -->
 <div class="stats">
@@ -1133,18 +1275,18 @@
 
     <div style="margin-top: 48px; padding-top: 36px; border-top: 1px solid #E8E4DC;">
       <p style="font-size: 12px; color: #bbb; letter-spacing: 1px; text-transform: uppercase;">Want to know when we drop?</p>
-      <div style="display: flex; gap: 0; margin-top: 16px; max-width: 420px; margin-left: auto; margin-right: auto; border-radius: 100px; overflow: hidden; border: 1.5px solid #DDD;">
-        <input type="email" placeholder="your@email.com"
-               style="flex: 1; padding: 16px 24px; border: none; outline: none; font-size: 14px;
-                      background: white; font-family: 'Barlow', sans-serif; color: #111;"/>
-        <button style="padding: 16px 28px; background: #556650; color: white; border: none;
-                       font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-                       cursor: pointer; font-family: 'Barlow', sans-serif; white-space: nowrap;"
+      <form action="https://github.us18.list-manage.com/subscribe/post?u=0f854b146e3424d1271cbc689&amp;id=c053ed110f&amp;f_id=00e9ace6f0" method="post" target="_blank"
+            style="display: flex; gap: 0; margin-top: 16px; max-width: 420px; margin-left: auto; margin-right: auto; border-radius: 100px; overflow: hidden; border: 1.5px solid #DDD;">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required
+               style="flex: 1; padding: 16px 24px; border: none; outline: none; font-size: 14px; background: white; font-family: 'Barlow', sans-serif; color: #111;"/>
+        <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_0f854b146e3424d1271cbc689_c053ed110f" tabindex="-1" value=""></div>
+        <button type="submit"
+                style="padding: 16px 28px; background: #556650; color: white; border: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; font-family: 'Barlow', sans-serif; white-space: nowrap; transition: background 0.2s;"
                 onmouseover="this.style.background='#111'"
                 onmouseout="this.style.background='#556650'">
           Notify Me
         </button>
-      </div>
+      </form>
       <p style="font-size: 11px; color: #ccc; margin-top: 10px;">No spam. Just cashews.</p>
     </div>
   </div>
@@ -1159,6 +1301,14 @@
     <div class="footer-origin">Family farmed in Cambodia · Naturally grown · No pesticides</div>
   </div>
 </footer>
+
+<script type="text/javascript">
+// Mailchimp form handling without jQuery
+(function() {
+  window.fnames = ['EMAIL','FNAME','LNAME','ADDRESS','PHONE','BIRTHDAY','COMPANY'];
+  window.ftypes = ['email','text','text','address','phone','birthday','text'];
+})();
+</script>
 
 </body>
 </html>
