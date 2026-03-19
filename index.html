@@ -104,7 +104,7 @@ nav{
   width:auto;
   position:absolute;
   right:-5%;
-  bottom:-12%;
+  bottom:-22%;
   opacity:0;
   animation:fadeIn 1.2s ease forwards 0.5s;
   object-fit:contain;
@@ -135,17 +135,13 @@ nav{
 .stat-hero-desc{font-size:18px;color:rgba(250,250,248,0.55);font-style:italic;position:relative;z-index:1;margin-top:12px;}
 .stat-small{background:var(--surface-dim);border-radius:24px;padding:36px 32px;display:flex;flex-direction:column;justify-content:center;}
 .stat-small-num{font-family:'Abril Fatface',serif;font-size:72px;color:var(--gold);line-height:1;letter-spacing:-2px;}
-.stat-small-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#888;margin-top:4px;}
-.stat-small-desc{font-size:13px;color:#666;line-height:1.6;margin-top:8px;}
+.stat-small-label{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#888;margin-top:8px;}
 .stat-flavors{
   grid-column:3/5;
   background:var(--gold);border-radius:24px;padding:36px 40px;
-  display:flex;align-items:center;justify-content:space-between;
-  cursor:pointer;transition:background 0.2s;
+  display:flex;align-items:center;justify-content:center;
 }
-.stat-flavors:hover{background:#b07a0e;}
-.stat-flavors-text{font-family:'Abril Fatface',serif;font-size:clamp(28px,3vw,44px);color:var(--black);line-height:1.1;}
-.stat-flavors-arrow{font-family:'Abril Fatface',serif;font-size:36px;color:var(--black);}
+.stat-flavors-text{font-family:'Abril Fatface',serif;font-size:clamp(28px,3vw,44px);color:var(--black);line-height:1.1;text-align:center;}
 
 /* FLAVORS - SINGLE SKU */
 .flavors-section{background:var(--cream);padding:100px 48px;}
@@ -486,16 +482,13 @@ footer{background:var(--black);color:var(--warm-white);padding:64px 48px 40px;}
   <div class="stat-small">
     <div class="stat-small-num">0</div>
     <div class="stat-small-label">Pesticides</div>
-    <p class="stat-small-desc">Naturally farmed. No chemicals. No compromises.</p>
   </div>
   <div class="stat-small">
     <div class="stat-small-num">1</div>
     <div class="stat-small-label">Single Origin</div>
-    <p class="stat-small-desc">One farm. One family. One source of truth.</p>
   </div>
   <div class="stat-flavors">
-    <div class="stat-flavors-text">3 Signature<br>Flavors</div>
-    <div class="stat-flavors-arrow">→</div>
+    <div class="stat-flavors-text">3 Signature Flavors</div>
   </div>
 </section>
 
