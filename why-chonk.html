@@ -43,7 +43,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .founder{padding:100px 64px;background:var(--surface);display:grid;grid-template-columns:320px 1fr;gap:80px;align-items:center;max-width:100%;}
 .founder-img-wrap{position:relative;}
 .founder-photo{width:280px;aspect-ratio:4/5;background:var(--surface-dim);border-radius:20px;overflow:hidden;position:relative;}
-.founder-photo img{width:100%;height:100%;object-fit:cover;}
+.founder-photo img,.founder-photo video{width:100%;height:100%;object-fit:cover;}
 .founder-photo-label{position:absolute;bottom:12px;left:12px;background:var(--gold);color:var(--black);padding:5px 14px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
 .founder-caption{margin-top:12px;font-size:12px;color:#999;font-style:italic;}
 .founder-content{}
@@ -126,62 +126,58 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-primary:hover{background:#b07a0e;}
 .btn-primary:active{transform:scale(0.97);}
 
-/* FOOTER */
-footer{background:var(--black);color:var(--warm-white);padding:64px 48px 40px;}
-.footer-chonk{font-family:'Abril Fatface',serif;font-size:clamp(80px,14vw,200px);color:var(--gold);opacity:0.07;line-height:0.85;letter-spacing:-4px;display:block;text-align:center;margin-bottom:48px;user-select:none;}
-.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;max-width:1000px;margin:0 auto 48px;padding-top:40px;border-top:1px solid rgba(201,138,16,0.1);}
-.footer-col-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:block;}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
-.footer-col ul a{font-size:14px;color:rgba(250,250,248,0.5);text-decoration:none;transition:color 0.2s;}
-.footer-col ul a:hover{color:var(--gold);}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid rgba(201,138,16,0.08);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(250,250,248,0.2);}
-.footer-bottom a{color:rgba(250,250,248,0.2);text-decoration:none;transition:color 0.2s;}
-.footer-bottom a:hover{color:var(--gold);}
-
 /* RESPONSIVE — TABLET */
 @media(max-width:960px){
   nav{padding:0 20px;}
   .nav-links{display:none;}
+  .nav-cta{padding:8px 18px;font-size:10px;}
   .page-hero{padding:110px 32px 72px;}
+  .page-h1{font-size:clamp(48px,10vw,80px);letter-spacing:-2px;}
   .founder{grid-template-columns:1fr;padding:64px 32px;gap:40px;}
-  .founder-img-wrap{max-width:480px;}
+  .founder-img-wrap{max-width:360px;}
+  .founder-photo{width:100%;}
   .farm{padding:64px 32px;}
   .farm-inner{grid-template-columns:1fr;gap:40px;}
+  .farm-stats{grid-template-columns:1fr 1fr;}
   .process{padding:64px 32px;}
   .process-steps{grid-template-columns:1fr 1fr;}
   .difference{padding:64px 32px;}
   .difference-grid{grid-template-columns:1fr;}
   .commitment{padding:72px 32px;}
-  footer{padding:48px 24px 32px;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  footer{padding:32px 24px !important;flex-direction:column !important;gap:12px !important;text-align:center !important;}
 }
 
 /* RESPONSIVE — MOBILE */
 @media(max-width:600px){
   nav{height:60px;}
   .nav-logo{font-size:20px;}
-  .page-hero{padding:96px 20px 60px;}
-  .page-h1{font-size:clamp(44px,13vw,72px);letter-spacing:-2px;}
-  .page-lead{font-size:16px;}
-  .founder{padding:48px 20px;gap:32px;}
-  .founder-h2{font-size:clamp(28px,8vw,44px);}
-  .founder-p{font-size:16px;}
+  .page-hero{padding:88px 20px 56px;}
+  .page-h1{font-size:clamp(36px,11vw,60px);letter-spacing:-2px;line-height:1.0;}
+  .page-lead{font-size:15px;line-height:1.75;}
+  .founder{padding:48px 20px;gap:28px;}
+  .founder-img-wrap{max-width:100%;}
+  .founder-photo{width:100%;}
+  .founder-h2{font-size:clamp(26px,8vw,40px);}
+  .founder-p{font-size:15px;}
   .farm{padding:48px 20px;}
-  .farm-h2{font-size:clamp(32px,9vw,52px);}
-  .farm-stats{grid-template-columns:1fr 1fr;}
+  .farm-h2{font-size:clamp(28px,8vw,48px);}
+  .farm-stats{grid-template-columns:1fr 1fr;gap:10px;}
+  .farm-stat-num{font-size:32px;}
+  .farm-card{padding:24px 20px;}
   .process{padding:48px 20px;}
   .process-steps{grid-template-columns:1fr;}
-  .process-h2{font-size:clamp(32px,9vw,52px);}
+  .process-h2{font-size:clamp(28px,8vw,48px);}
+  .process-step{padding:28px 20px;}
+  .process-step-num{font-size:40px;}
   .difference{padding:48px 20px;}
-  .difference-h2{font-size:clamp(32px,9vw,52px);}
-  .diff-card{padding:32px 28px;}
-  .commitment{padding:60px 20px;}
-  .commitment-h2{font-size:clamp(36px,10vw,60px);}
-  .commitment-p{font-size:16px;}
-  footer{padding:40px 20px 24px;}
-  .footer-grid{grid-template-columns:1fr;gap:28px;}
-  .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
-  .footer-chonk{font-size:clamp(56px,20vw,100px);}
+  .difference-h2{font-size:clamp(28px,8vw,48px);}
+  .diff-card{padding:28px 20px;}
+  .diff-h3{font-size:clamp(22px,6vw,32px);}
+  .commitment{padding:56px 20px;}
+  .commitment-h2{font-size:clamp(32px,9vw,52px);letter-spacing:-1px;}
+  .commitment-p{font-size:15px;}
+  .btn-primary{width:100%;text-align:center;padding:14px 24px;}
+  footer{padding:28px 20px !important;flex-direction:column !important;gap:10px !important;text-align:center !important;}
 }
 </style>
 </head>
@@ -233,8 +229,8 @@ footer{background:var(--black);color:var(--warm-white);padding:64px 48px 40px;}
   <div class="farm-inner">
     <div>
       <span class="farm-label">The Source</span>
-      <h2 class="farm-h2">One farm.<br><em>Siem Reap.</em><br>That's it.</h2>
-      <p class="farm-p">Every CHONK cashew comes from a single family farm in Siem Reap, Cambodia. Not a supplier network. Not a broker. Our family's operation, run by my father, the same way it's always been run — without pesticides, without shortcuts, with actual care for the land.</p>
+      <h2 class="farm-h2">One farm.<br><em>Kampong Chhnang.</em><br>That's it.</h2>
+      <p class="farm-p">Every CHONK cashew comes from a single family farm in Kampong Chhnang, Cambodia. Not a supplier network. Not a broker. Our family's operation, run by my father, the same way it's always been run — without pesticides, without shortcuts, with actual care for the land.</p>
       <p class="farm-p">We know where every nut comes from because we grow it. That's not a marketing line. That's just the truth.</p>
       <div class="farm-stats">
         <div class="farm-stat">
@@ -258,7 +254,7 @@ footer{background:var(--black);color:var(--warm-white);padding:64px 48px 40px;}
     <div class="farm-visual">
       <div class="farm-card dark">
         <h3 class="farm-card-title">Naturally Farmed</h3>
-        <p class="farm-card-text">No pesticides. No chemical inputs. The land in Siem Reap stays healthy because we treat it that way. Always have.</p>
+        <p class="farm-card-text">No pesticides. No chemical inputs. The land in Kampong Chhnang stays healthy because we treat it that way. Always have.</p>
       </div>
       <div class="farm-card gold">
         <h3 class="farm-card-title">Skin-On. Always.</h3>
@@ -281,8 +277,8 @@ footer{background:var(--black);color:var(--warm-white);padding:64px 48px 40px;}
       <div class="process-step">
         <span class="process-step-num">01.</span>
         <h4 class="process-step-title">Grown</h4>
-        <p class="process-step-text">Naturally farmed on our family plot in Siem Reap. No pesticides. No chemical inputs. Harvested by hand when ready.</p>
-        <span class="process-step-origin">Siem Reap, Cambodia</span>
+        <p class="process-step-text">Naturally farmed on our family plot in Kampong Chhnang. No pesticides. No chemical inputs. Harvested by hand when ready.</p>
+        <span class="process-step-origin">Kampong Chhnang, Cambodia</span>
       </div>
       <div class="process-step">
         <span class="process-step-num">02.</span>
@@ -331,7 +327,7 @@ footer{background:var(--black);color:var(--warm-white);padding:64px 48px 40px;}
           <li class="diff-item"><span class="diff-dot"></span><span>W180 grade only — the biggest cashews that exist</span></li>
           <li class="diff-item"><span class="diff-dot"></span><span>Skin-on, always — crunch and flavor the way it should be</span></li>
           <li class="diff-item"><span class="diff-dot"></span><span>No added oils — just the natural butter of the nut itself</span></li>
-          <li class="diff-item"><span class="diff-dot"></span><span>Single origin — one family farm, Siem Reap, Cambodia</span></li>
+          <li class="diff-item"><span class="diff-dot"></span><span>Single origin — one family farm, Kampong Chhnang, Cambodia</span></li>
           <li class="diff-item"><span class="diff-dot"></span><span>Two ingredients: cashews and sea salt. That's the list.</span></li>
           <li class="diff-item"><span class="diff-dot"></span><span>Big enough to actually taste. A nut worth finishing.</span></li>
         </ul>
